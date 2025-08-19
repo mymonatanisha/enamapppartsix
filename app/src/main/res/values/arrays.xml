@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="occupations_array">
+        <item>Select Occupation</item>
+        <item>Student</item>
+        <item>new graduates</item>
+        <item>Freelancer</item>
+        <item>Businessman</item>
+        <item>Serviceman</item>
+    </string-array>
+</resources>

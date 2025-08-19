@@ -1,4 +1,4 @@
-package com.enamnotes.enamappparttwo;
+package com.enamnotes.enamapppartsix;
 
 import org.junit.Test;
 

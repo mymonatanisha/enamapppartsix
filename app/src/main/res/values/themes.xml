@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Enamappparttwo" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Enamapppartsix" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.Enamappparttwo" parent="Base.Theme.Enamappparttwo" />
+    <style name="Theme.Enamapppartsix" parent="Base.Theme.Enamapppartsix" />
 </resources>

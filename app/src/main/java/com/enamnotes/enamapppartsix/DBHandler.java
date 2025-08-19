@@ -1,4 +1,4 @@
-package com.enamnotes.enamappparttwo;
+package com.enamnotes.enamapppartsix;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -12,21 +12,34 @@ public class DBHandler extends SQLiteOpenHelper {
 
     // 🔹 DB Info
     private static final String DATABASE_NAME = "participantdb";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 9;
     private static final String TAG = "DBHandler";
 
     // 🔹 Example Table & Columns
     public static final String TABLE_NAME = "participantlist";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_NAME = "name";
-;
+    // Step 2: Add GENDER column
+    public static final String COLUMN_GENDER = "gender";
+    public static final String COLUMN_DOB = "dob";
+
+    public static final String COLUMN_OCCUPATION = "occupation";
+
+    public static final String COLUMN_HAVINGINTEREST = "havinginterest";
+    public static final String COLUMN_IMAGE = "image";
+
+
 
     // 🔹 Create Table SQL
     private static final String QUERY =
             "CREATE TABLE " + TABLE_NAME + " (" +
                     COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    COLUMN_NAME + " TEXT) ";
-
+                    COLUMN_NAME + " TEXT, " +
+                    COLUMN_GENDER + " TEXT, " +
+                    COLUMN_DOB + " TEXT, " +
+                    COLUMN_OCCUPATION + " TEXT," +
+                    COLUMN_HAVINGINTEREST + " TEXT, " +
+                    COLUMN_IMAGE + " TEXT) ";
     // Constructor
     public DBHandler(Context context) {
         super(context, getCustomDatabasePath(context), null, DATABASE_VERSION);
@@ -51,10 +64,15 @@ public class DBHandler extends SQLiteOpenHelper {
 
     // now creating a method to save data to database
 
-    public void addParticipant(String participantName) {
+    public void addParticipant(String participantName, String gender, String dob,  String occupation, String havinginterest, String imagePath) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_NAME, participantName);
+        values.put(COLUMN_GENDER, gender);
+        values.put(COLUMN_DOB, dob );
+        values.put(COLUMN_OCCUPATION, occupation);
+        values.put(COLUMN_HAVINGINTEREST, havinginterest);
+        values.put(COLUMN_IMAGE, imagePath);
         db.insert(TABLE_NAME, null, values);
 
         db.close();

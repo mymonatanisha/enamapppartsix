@@ -12,20 +12,23 @@ public class DBHandler extends SQLiteOpenHelper {
 
     // 🔹 DB Info
     private static final String DATABASE_NAME = "participantdb";
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 4;
     private static final String TAG = "DBHandler";
 
     // 🔹 Example Table & Columns
     public static final String TABLE_NAME = "participantlist";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_NAME = "name";
+    // Step 2: Add GENDER column
+    public static final String COLUMN_GENDER = "gender";
 ;
 
     // 🔹 Create Table SQL
     private static final String QUERY =
             "CREATE TABLE " + TABLE_NAME + " (" +
                     COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                    COLUMN_NAME + " TEXT) ";
+                    COLUMN_NAME + " TEXT, " +
+                    COLUMN_GENDER + " TEXT) ";
 
     // Constructor
     public DBHandler(Context context) {
@@ -51,10 +54,11 @@ public class DBHandler extends SQLiteOpenHelper {
 
     // now creating a method to save data to database
 
-    public void addParticipant(String participantName) {
+    public void addParticipant(String participantName, String gender) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_NAME, participantName);
+        values.put(COLUMN_GENDER, gender);
         db.insert(TABLE_NAME, null, values);
 
         db.close();

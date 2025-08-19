@@ -8,12 +8,46 @@
     android:orientation="vertical"
     tools:context="com.enamnotes.enamappparttwo.MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="1.  Participant Name: "
+        android:textSize="16sp" />
+
     <EditText
         android:id="@+id/idParticipantName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:hint="Enter Name"/>
+        android:hint="Enter Name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="2. Gender: "
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+        <RadioButton
+            android:id="@+id/rbMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/rbFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/idParticipantBtn"
@@ -21,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Save"
-        android:textAllCaps="false"/>
+        android:textAllCaps="false" />
 
 
 </LinearLayout>

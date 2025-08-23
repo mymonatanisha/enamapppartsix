@@ -50,6 +50,14 @@
     </RadioGroup>
 
     <Button
+        android:id="@+id/btnUploadFile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Upload File"
+        android:textAllCaps="false" />
+
+    <Button
         android:id="@+id/idParticipantBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

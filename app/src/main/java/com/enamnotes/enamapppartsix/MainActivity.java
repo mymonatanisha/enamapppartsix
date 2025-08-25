@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private String selectedDob = "";
 
     private Spinner occupationSpinner;
+    private RadioGroup rgGender;
 
     private CheckBox cbWebDev, cbAppDev, cbFigma, cbSEO, cbDataAnalysis, cbMarketing;
     private static final int PICK_IMAGE_REQUEST = 1;
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         participantNameEdit = findViewById(R.id.idParticipantName);
         addparticipantBtn = findViewById(R.id.idParticipantBtn);
         // Step 3: Reference RadioGroup and get selected gender
-        RadioGroup rgGender = findViewById(R.id.rgGender);
+        rgGender = findViewById(R.id.rgGender);
         tvDob = findViewById(R.id.tvDob);
         occupationSpinner = findViewById(R.id.spinnerOccupation);
 
@@ -55,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
         cbAppDev = findViewById(R.id.cbAppDev);
         cbFigma = findViewById(R.id.cbFigma);
         cbSEO = findViewById(R.id.cbSEO);
-        cbDataAnalysis =findViewById(R.id.cbDataAnalysis);
         cbDataAnalysis = findViewById(R.id.cbDataAnalysis);
+        cbMarketing = findViewById(R.id.cbMarketing);
         uploadFileBtn = findViewById(R.id.btnUploadFile);
 
 

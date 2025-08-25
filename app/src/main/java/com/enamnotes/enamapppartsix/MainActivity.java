@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     private String selectedDob = "";
 
     private Spinner occupationSpinner;
-
+    private RadioGroup rgGender;
     private CheckBox cbWebDev, cbAppDev, cbFigma, cbSEO, cbDataAnalysis, cbMarketing;
     private static final int PICK_IMAGE_REQUEST = 1;
     private Button uploadFileBtn;
@@ -45,17 +45,17 @@ public class MainActivity extends AppCompatActivity {
         participantNameEdit = findViewById(R.id.idParticipantName);
         addparticipantBtn = findViewById(R.id.idParticipantBtn);
         // Step 3: Reference RadioGroup and get selected gender
-        RadioGroup rgGender = findViewById(R.id.rgGender);
+
         tvDob = findViewById(R.id.tvDob);
         occupationSpinner = findViewById(R.id.spinnerOccupation);
-
+        rgGender = findViewById(R.id.rgGender);
         //Initialize having interest
 
         cbWebDev = findViewById(R.id.cbWebDev);
         cbAppDev = findViewById(R.id.cbAppDev);
         cbFigma = findViewById(R.id.cbFigma);
         cbSEO = findViewById(R.id.cbSEO);
-        cbDataAnalysis =findViewById(R.id.cbDataAnalysis);
+        cbMarketing = findViewById(R.id.cbMarketing);
         cbDataAnalysis = findViewById(R.id.cbDataAnalysis);
         uploadFileBtn = findViewById(R.id.btnUploadFile);
 

@@ -1,158 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginStart="20dp"
-    android:layout_marginTop="50dp"
-    android:layout_marginEnd="20dp"
-    android:layout_marginBottom="20dp"
-    android:orientation="vertical"
-    tools:context="enamapppartsix.MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="1.  Participant Name: "
-        android:textSize="16sp" />
-
-    <EditText
-        android:id="@+id/idParticipantName"
+    <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:hint="Enter Name" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        tools:context="enamapppartsix.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="2. Gender: "
-        android:textSize="16sp" />
-
-    <RadioGroup
-        android:id="@+id/rgGender"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/rbMale"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Male" />
+            android:layout_margin="10dp"
+            android:text="1.  Participant Name: "
+            android:textSize="16sp" />
 
-        <RadioButton
-            android:id="@+id/rbFemale"
+        <EditText
+            android:id="@+id/idParticipantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Enter Name" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Female" />
-    </RadioGroup>
+            android:layout_margin="10dp"
+            android:text="2. Gender: "
+            android:textSize="16sp" />
 
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="2. Date of Birth: "
-        android:textSize="16sp" />
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
 
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+        </RadioGroup>
 
-    <!-- Date of Birth Display -->
-    <TextView
-        android:id="@+id/tvDob"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@android:drawable/editbox_background"
-        android:clickable="true"
-        android:focusable="true"
-        android:padding="10dp"
-        android:text="Select Date"
-        android:textColor="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="2. Date of Birth: "
+            android:textSize="16sp" />
 
-    <!-- 4. Occupation -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="4. Occupation:"
-        android:textSize="16sp" />
+        <!-- Date of Birth Display -->
+        <TextView
+            android:id="@+id/tvDob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:drawable/editbox_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp"
+            android:text="Select Date"
+            android:textColor="@color/black" />
 
-    <Spinner
-        android:id="@+id/spinnerOccupation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/editbox_background"
-        android:layout_margin="10dp" />
+        <!-- 4. Occupation -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="4. Occupation:"
+            android:textSize="16sp" />
 
+        <Spinner
+            android:id="@+id/spinnerOccupation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:layout_margin="10dp" />
 
-    <!-- 5. Having Interest (Checkbox)-->
+        <!-- 5. Having Interest (Checkbox)-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="5. Having Interest"
-        android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="5. Having Interest"
+            android:textSize="16sp" />
 
-    <CheckBox
-        android:id="@+id/cbWebDev"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Web Dev" />
+        <CheckBox
+            android:id="@+id/cbWebDev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Web Dev" />
 
-    <CheckBox
-        android:id="@+id/cbAppDev"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="App Dev" />
-    <CheckBox
-        android:id="@+id/cbFigma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Figma" />
-    <CheckBox
-        android:id="@+id/cbSEO"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="SEO" />
-    <CheckBox
-        android:id="@+id/cbDataAnalysis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Data Analysis" />
-    <CheckBox
-        android:id="@+id/cbMarketing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="Marketing" />
-    <Button
-        android:id="@+id/btnUploadFile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Upload File"
-        android:textAllCaps="false" />
+        <CheckBox
+            android:id="@+id/cbAppDev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="App Dev" />
+        <CheckBox
+            android:id="@+id/cbFigma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Figma" />
+        <CheckBox
+            android:id="@+id/cbSEO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="SEO" />
+        <CheckBox
+            android:id="@+id/cbDataAnalysis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Data Analysis" />
+        <CheckBox
+            android:id="@+id/cbMarketing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Marketing" />
+        <!-- ... all your views ... -->
 
+        <Button
+            android:id="@+id/btnUploadFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Upload File"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/idParticipantBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Save"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/idParticipantBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Save"
+            android:textAllCaps="false" />
 
+        <Button
 
-</LinearLayout>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>
